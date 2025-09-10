@@ -25,7 +25,13 @@ Este proyecto corresponde al taller referente a la sesión de **Rate Limiting co
       "QuotesDb": "Server=(localdb)\\MSSQLLocalDB;Database=QuotesDb;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True"
     },
 
-3. Crear la base de datos y aplicar migraciones:
+3. Descargar librerias:
+   ```bash
+     a. dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+     b. dotnet add package Microsoft.EntityFrameworkCore.Design
+     c. dotnet add package Microsoft.EntityFrameworkCore.Tools
+
+4. Crear la base de datos y aplicar migraciones:
      ```bash
      a. dotnet ef migrations add InitialCreate
      b. dotnet ef database update
