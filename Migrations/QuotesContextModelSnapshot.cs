@@ -4,19 +4,16 @@ using API.Quotes.Limit.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
 namespace API.Quotes.Limit.Migrations
 {
-    [DbContext(typeof(QuotesDbContext))]
-    [Migration("20250910190848_InitialCreate")]
-    partial class InitialCreate
+    [DbContext(typeof(QuotesContext))]
+    partial class QuotesContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,8 +57,8 @@ namespace API.Quotes.Limit.Migrations
                         new
                         {
                             Id = 1,
-                            CompanyName = "Apple Inc.",
-                            MarketCap = 2500000000000L,
+                            CompanyName = "Apple Inc",
+                            MarketCap = 250000000000L,
                             Price = 150.25m,
                             Symbol = "AAPL",
                             Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -69,82 +66,118 @@ namespace API.Quotes.Limit.Migrations
                         new
                         {
                             Id = 2,
-                            CompanyName = "Microsoft Corporation",
-                            MarketCap = 2200000000000L,
-                            Price = 280.50m,
+                            CompanyName = "Microsoft corporation",
+                            MarketCap = 220000000000L,
+                            Price = 150.25m,
                             Symbol = "MSFT",
                             Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 3,
-                            CompanyName = "Alphabet Inc.",
-                            MarketCap = 1800000000000L,
-                            Price = 2700.75m,
+                            CompanyName = "Alphabet Inc",
+                            MarketCap = 180000000000L,
+                            Price = 150.25m,
                             Symbol = "GOOGL",
                             Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 4,
-                            CompanyName = "Amazon.com, Inc.",
-                            MarketCap = 1700000000000L,
-                            Price = 3300.10m,
-                            Symbol = "AMZN",
-                            Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CompanyName = "Tesla, Inc.",
-                            MarketCap = 800000000000L,
-                            Price = 700.30m,
+                            CompanyName = "Tesla Inc",
+                            MarketCap = 170000000000L,
+                            Price = 150.25m,
                             Symbol = "TSLA",
                             Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
+                            Id = 5,
+                            CompanyName = "Amazon.com Inc",
+                            MarketCap = 160000000000L,
+                            Price = 145.80m,
+                            Symbol = "AMZN",
+                            Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
                             Id = 6,
-                            CompanyName = "NVIDIA Corporation",
-                            MarketCap = 900000000000L,
-                            Price = 400.75m,
-                            Symbol = "NVDA",
+                            CompanyName = "Meta Platforms Inc",
+                            MarketCap = 90000000000L,
+                            Price = 310.45m,
+                            Symbol = "META",
                             Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 7,
-                            CompanyName = "Meta Platforms, Inc.",
-                            MarketCap = 950000000000L,
-                            Price = 350.60m,
-                            Symbol = "FB",
-                            Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CompanyName = "Netflix, Inc.",
-                            MarketCap = 250000000000L,
-                            Price = 500.20m,
+                            CompanyName = "Netflix Inc",
+                            MarketCap = 80000000000L,
+                            Price = 420.75m,
                             Symbol = "NFLX",
                             Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
+                            Id = 8,
+                            CompanyName = "NVIDIA Corporation",
+                            MarketCap = 150000000000L,
+                            Price = 480.20m,
+                            Symbol = "NVDA",
+                            Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
                             Id = 9,
-                            CompanyName = "Alibaba Group Holding Limited",
-                            MarketCap = 500000000000L,
-                            Price = 200.15m,
-                            Symbol = "BABA",
+                            CompanyName = "Advanced Micro Devices Inc",
+                            MarketCap = 70000000000L,
+                            Price = 110.60m,
+                            Symbol = "AMD",
                             Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 10,
-                            CompanyName = "Visa Inc.",
-                            MarketCap = 480000000000L,
-                            Price = 220.40m,
-                            Symbol = "V",
+                            CompanyName = "Intel Corporation",
+                            MarketCap = 60000000000L,
+                            Price = 35.90m,
+                            Symbol = "INTC",
+                            Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CompanyName = "Oracle Corporation",
+                            MarketCap = 75000000000L,
+                            Price = 88.15m,
+                            Symbol = "ORCL",
+                            Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CompanyName = "SAP SE",
+                            MarketCap = 65000000000L,
+                            Price = 135.45m,
+                            Symbol = "SAP",
+                            Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CompanyName = "Uber Technologies Inc",
+                            MarketCap = 55000000000L,
+                            Price = 42.75m,
+                            Symbol = "UBER",
+                            Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CompanyName = "Lyft Inc",
+                            MarketCap = 10000000000L,
+                            Price = 11.20m,
+                            Symbol = "LYFT",
                             Timestamp = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });

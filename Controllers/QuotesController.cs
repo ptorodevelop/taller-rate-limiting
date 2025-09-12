@@ -15,13 +15,13 @@ namespace API.Quotes.Limit.Controllers
         private readonly ILogger<QuotesController> _logger;
         private readonly IRateLimiterService _rateLimiterService;
         private readonly IDatabase _redisDb;
-        private readonly QuotesDbContext _context;
+        private readonly QuotesContext _context;
 
         public QuotesController(
             IRateLimiterService rateLimiterService,
             IConnectionMultiplexer redisDb,
             ILogger<QuotesController> logger,
-            QuotesDbContext context)
+            QuotesContext context)
         {
             _rateLimiterService = rateLimiterService;
             _redisDb = redisDb.GetDatabase();
