@@ -16,11 +16,10 @@ namespace API.Quotes.Limit
             // Add services to the container.
             builder.Services.AddControllers();
 
-            // DbContext: SOLO aquí
-            builder.Services.AddDbContext<QuotesDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("QuotesDb")));
+         
+            builder.Services.AddDbContext<QuotesContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("Quotes")));
 
-            // Redis
             builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
                 ConnectionMultiplexer.Connect("localhost:6379")
             );
