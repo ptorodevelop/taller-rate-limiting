@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("API.Quotes.Limit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8edd5c620724664c9cddfcc6d7e247998d3edae1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+591f529981a3fd93c376840e46f8c51474cd2210")]
 [assembly: System.Reflection.AssemblyProductAttribute("API.Quotes.Limit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("API.Quotes.Limit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
